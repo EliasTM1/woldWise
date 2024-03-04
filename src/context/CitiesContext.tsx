@@ -44,15 +44,16 @@ export function CitiesProvider({ children }: CitiesProviderProps) {
 	}, []);
 
 	async function getCity(id: number | string) {
+		setIsLoading(true);
 		try {
-			setIsLoading(true);
 			const response = await fetch(`${BASE_URL}/cities/${id}`);
 			const data = await response.json();
 			setCurrentCity(data);
 		} catch {
 			console.log("There was an error loading your data");
 		} finally {
-			setIsLoading(false);
+			// setTimeout(() => setIsLoading(false),1000)
+			setIsLoading(false)
 		}
 	}
 	return (
