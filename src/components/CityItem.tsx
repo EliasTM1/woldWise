@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { City } from "../types/country";
 import style from "./CityItem.module.css";
-import { useCities } from "../context/CitiesContext";
+// import { useCities } from "../context/CitiesContext";
 
 type CityItemProps = {
 	city: City;
@@ -16,7 +16,7 @@ const formatDate = (date: string) => {
 };
 
 export function CityItem({ city }: CityItemProps) {
-	const { currentCity } = useCities();
+	// const { currentCity } = useCities();
 	const { cityName, emoji, date, id, position } = city;
 	return (
 		<Link

@@ -6,7 +6,7 @@ import styles from "./Form.module.css";
 import Button from "./Button";
 import { useNavigate } from "react-router-dom";
 
-export function convertToEmoji(countryCode) {
+export function convertToEmoji(countryCode: string) {
 	const codePoints = countryCode
 		.toUpperCase()
 		.split("")
