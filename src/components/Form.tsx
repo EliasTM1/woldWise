@@ -21,9 +21,7 @@ function Form() {
 	const [notes, setNotes] = useState("");
 	const navigate = useNavigate();
 
-	const handleBack = (event: MouseEvent) => {
-    console.log("first=========")
-		event.preventDefault();
+	const handleBack = () => {
 		navigate(-1);
 	};
 	return (
@@ -35,7 +33,6 @@ function Form() {
 					onChange={(e) => setCityName(e.target.value)}
 					value={cityName}
 				/>
-				{/* <span className={styles.flag}>{emoji}</span> */}
 			</div>
 
 			<div className={styles.row}>
@@ -60,7 +57,7 @@ function Form() {
 				<Button onClick={() => {}} type='primary'>
 					Add
 				</Button>
-				<Button onClick={(e: MouseEvent) => handleBack(e)} type='back'>
+				<Button onClick={handleBack} type='back'>
 					&larr; Back
 				</Button>
 			</div>

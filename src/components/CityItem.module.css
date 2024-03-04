@@ -1,6 +1,7 @@
 .cityItem,
 .cityItem:link,
 .cityItem:visited {
+  margin: 2rem;
   display: flex;
   gap: 1.6rem;
   align-items: center;
