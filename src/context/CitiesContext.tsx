@@ -2,7 +2,7 @@ import { createContext, useContext, useEffect, useReducer } from "react";
 import { City } from "../types/country";
 import {
 	ActionObjT,
-	CitiesProviderProps,
+	ProviderProps,
 	CityContextType,
 	InitialStateT,
 } from "./contextTypes";
@@ -61,7 +61,7 @@ function reducer(state: InitialStateT, action: ActionObjT) {
 	}
 }
 
-export function CitiesProvider({ children }: CitiesProviderProps) {
+export function CitiesProvider({ children }: ProviderProps) {
 	const [{ cities, isLoading, currentCity }, dispatch] = useReducer(
 		reducer,
 		initialState
@@ -132,7 +132,7 @@ export function CitiesProvider({ children }: CitiesProviderProps) {
 				cities,
 				isLoading,
 				currentCity: currentCity,
-				getCity: getCity,
+				getCity,
 				createCity,
 				deleteCity,
 			}}

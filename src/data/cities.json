@@ -25,18 +25,6 @@
       }
     },
     {
-      "id": "df42",
-      "cityName": "Kargopol’",
-      "country": "Russian Federation (the)",
-      "emoji": "🇷🇺",
-      "date": "2024-03-05T01:32:41.340Z",
-      "notes": "dgsf",
-      "position": {
-        "lat": 61.56457388515458,
-        "lng": 38.14453125000001
-      }
-    },
-    {
       "id": "263c",
       "cityName": "Lisbon",
       "country": "Portugal",
@@ -46,6 +34,18 @@
       "position": {
         "lat": 38.77375921583008,
         "lng": -9.158477783203127
+      }
+    },
+    {
+      "id": "b4b5",
+      "cityName": "Rueil-Malmaison",
+      "country": "France",
+      "emoji": "🇫🇷",
+      "date": "2024-03-05T21:22:37.732Z",
+      "notes": "",
+      "position": {
+        "lat": 48.862456199187356,
+        "lng": 2.192630767822266
       }
     }
   ]

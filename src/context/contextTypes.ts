@@ -9,21 +9,27 @@ export type ActionType =
 	| "city/created"
 	| "city/deleted";
 
+export type FakeAuthType = "login" | "logout";
+
 export type InitialStateT = {
 	cities: City[];
 	isLoading: boolean;
 	currentCity: City;
 };
 
-export type CityPayload = Partial<InitialStateT>;
-
-
-export type CitiesProviderProps = {
+export type ProviderProps = {
 	children: ReactNode;
 };
 
 export type ActionObjT = {
 	type: ActionType;
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
+	payload?: any;
+};
+// 
+// export type AuthObjT = Omit<ActionObjT, "type"> & { type: FakeAuthType };
+export type AuthObjT = {
+	type: FakeAuthType;
 	// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	payload?: any;
 };
