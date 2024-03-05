@@ -4,24 +4,21 @@ import {
 	ActionObjT,
 	CitiesProviderProps,
 	CityContextType,
+	InitialStateT,
 } from "./contextTypes";
 
 const CitiesContext = createContext<CityContextType>({} as CityContextType);
 const BASE_URL = "http://localhost:4444";
-type InitialState = {
-	cities: City[];
-	isLoading: boolean;
-	currentCity: City;
-};
 
-const initialState: InitialState = {
+
+const initialState: InitialStateT = {
 	cities: [],
 	isLoading: false,
 	currentCity: {} as City,
 };
 
 // function reducer(state: InitialState, action: Action) {
-function reducer(state: InitialState, action: ActionObjT) {
+function reducer(state: InitialStateT, action: ActionObjT) {
 	switch (action.type) {
 		case "loading":
 			return { ...state, isLoading: true };

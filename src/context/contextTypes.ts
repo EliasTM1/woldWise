@@ -9,14 +9,24 @@ export type ActionType =
 	| "city/created"
 	| "city/deleted";
 
+export type InitialStateT = {
+	cities: City[];
+	isLoading: boolean;
+	currentCity: City;
+};
+
+export type CityPayload = Partial<InitialStateT>;
+
+
 export type CitiesProviderProps = {
 	children: ReactNode;
 };
- 
+
 export type ActionObjT = {
-    type: ActionType;
-    payload?: any;
-  }
+	type: ActionType;
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
+	payload?: any;
+};
 
 export type CityContextType = {
 	cities: City[];
