@@ -9,8 +9,6 @@ const formatDate = (date: string) => {
 	const parsedDate = new Date(date); // Try parsing the input string as a Date object
 
 	if (isNaN(parsedDate.getTime())) {
-		// If parsing fails, return an empty string or handle the error accordingly
-		console.error("Invalid date format:", date);
 		return "";
 	}
 
@@ -28,10 +26,8 @@ function City() {
 	const { cityName, emoji, date, notes } = currentCity;
 
 	useEffect(() => {
-		console.log(id);
 		if (id) getCity(id);
 	}, [id]);
-	console.log(isLoading)
 
 	if(isLoading) {
 		return <Spinner />

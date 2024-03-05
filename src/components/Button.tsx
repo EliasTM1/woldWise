@@ -1,7 +1,7 @@
 import { ReactElement } from "react";
 import styles from "./Button.module.css";
 
-type ButtonProps = {
+type ButtonProps = { 
 	onClick: (event: MouseEvent) => void;
 	type: "primary" | "back" | "position";
 	children: ReactElement | string;
