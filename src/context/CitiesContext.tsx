@@ -17,7 +17,6 @@ const initialState: InitialStateT = {
 	currentCity: {} as City,
 };
 
-// function reducer(state: InitialState, action: Action) {
 function reducer(state: InitialStateT, action: ActionObjT) {
 	switch (action.type) {
 		case "loading":
@@ -131,7 +130,7 @@ export function CitiesProvider({ children }: ProviderProps) {
 			value={{
 				cities,
 				isLoading,
-				currentCity: currentCity,
+				currentCity,
 				getCity,
 				createCity,
 				deleteCity,

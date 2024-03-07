@@ -27,7 +27,6 @@ export type ActionObjT = {
 	payload?: any;
 };
 // 
-// export type AuthObjT = Omit<ActionObjT, "type"> & { type: FakeAuthType };
 export type AuthObjT = {
 	type: FakeAuthType;
 	// eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -41,4 +40,11 @@ export type CityContextType = {
 	getCity: (id: string | number) => Promise<void>;
 	createCity: (newCity: City) => void;
 	deleteCity: (cityId: number) => void;
+};
+
+export type UserContextType = {
+	user: {name: string, password: string};
+	isAuthenticated: boolean
+	login: (name: string, password: string) => void
+	logout: () => void;
 };
