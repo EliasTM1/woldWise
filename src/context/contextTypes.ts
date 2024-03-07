@@ -26,7 +26,7 @@ export type ActionObjT = {
 	// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	payload?: any;
 };
-// 
+//
 export type AuthObjT = {
 	type: FakeAuthType;
 	// eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -41,10 +41,11 @@ export type CityContextType = {
 	createCity: (newCity: City) => void;
 	deleteCity: (cityId: number) => void;
 };
+type User = { name: string; password: string; email: string; avatar?: string };
 
 export type UserContextType = {
-	user: {name: string, password: string};
-	isAuthenticated: boolean
-	login: (name: string, password: string) => void
+	user: User;
+	isAuthenticated: boolean;
+	login: (name: string, password: string) => void;
 	logout: () => void;
 };

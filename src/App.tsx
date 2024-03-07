@@ -27,7 +27,6 @@ function App() {
 						element={
 							<ProtectedRoutes>
 								<AppLayout />
-								//{" "}
 							</ProtectedRoutes>
 						}
 					>
